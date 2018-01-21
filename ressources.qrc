@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>opencv-logo.ico</file>
+    </qresource>
+</RCC>
