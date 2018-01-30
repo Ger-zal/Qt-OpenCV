@@ -14,7 +14,7 @@
    <string>MyCam -    Youssef Lazreg</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="quit">
     <property name="geometry">
      <rect>
       <x>528</x>
@@ -74,7 +74,7 @@
      <string>(0,0)</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="transform">
     <property name="geometry">
      <rect>
       <x>528</x>
@@ -136,6 +136,19 @@
      <string>HSV</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="original">
+    <property name="geometry">
+     <rect>
+      <x>528</x>
+      <y>196</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Original</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -161,7 +174,7 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pushButton</sender>
+   <sender>quit</sender>
    <signal>released()</signal>
    <receiver>MainWindow</receiver>
    <slot>close()</slot>

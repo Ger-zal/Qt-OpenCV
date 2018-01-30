@@ -6,7 +6,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include<QMouseEvent>
+#include <QMouseEvent>
 namespace Ui {
 class MainWindow;
 }
@@ -21,14 +21,23 @@ public:
 public slots:
     void getImage();
 
+private slots:
+    void updateImage();
+    void on_transform_clicked();
+    void on_original_clicked();
+
 private:
-    void mousePressEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *e);
+    void mouseReleaseEvent(QMouseEvent *event);
     Ui::MainWindow *ui;
     cv::VideoCapture stream;
     cv::Mat img;
     cv::Mat imgHSV;
     QImage  Qimg;
     QTimer *timer;
+    bool clicked;
+    bool transform;
+    cv::Vec3b hsvOriginal;
 };
 
 #endif // MAINWINDOW_H
